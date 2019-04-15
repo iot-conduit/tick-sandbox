@@ -1,0 +1,719 @@
+{
+	"meta": {
+		"chronografVersion": "1.7.8",
+		"sources": {
+			"10000": {
+				"name": "My InfluxDB",
+				"link": "/chronograf/v1/sources/10000"
+			}
+		}
+	},
+	"dashboard": {
+		"id": 1,
+		"cells": [
+			{
+				"i": "d23340e5-50e4-4e06-bb8f-822b103c3933",
+				"x": 0,
+				"y": 0,
+				"w": 4,
+				"h": 4,
+				"name": "Temperature",
+				"queries": [
+					{
+						"query": "from(bucket: \"ttn/autogen\")\n  |> range(start: dashboardTime)\n  |> filter(fn: (r) => r._measurement == \"mqtt_consumer_ttn\" and (r._field == \"payload_fields_tempC\"))",
+						"queryConfig": {
+							"database": "",
+							"measurement": "",
+							"retentionPolicy": "",
+							"fields": [],
+							"tags": {},
+							"groupBy": {
+								"time": "",
+								"tags": []
+							},
+							"areTagsAccepted": false,
+							"rawText": "from(bucket: \"ttn/autogen\")\n  |> range(start: dashboardTime)\n  |> filter(fn: (r) => r._measurement == \"mqtt_consumer_ttn\" and (r._field == \"payload_fields_tempC\"))",
+							"range": null,
+							"shifts": null
+						},
+						"source": "/chronograf/v1/sources/10000",
+						"type": "flux"
+					}
+				],
+				"axes": {
+					"x": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y2": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					}
+				},
+				"type": "line-plus-single-stat",
+				"colors": [
+					{
+						"id": "3ab7f262-7816-4b22-a382-d48f2d60afa8",
+						"type": "scale",
+						"hex": "#31C0F6",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "1d96aebb-46f2-419d-a05b-cb8a7a799402",
+						"type": "scale",
+						"hex": "#A500A5",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "a04cce49-cbfa-4824-83f0-250cd9223cdf",
+						"type": "scale",
+						"hex": "#FF7E27",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					}
+				],
+				"legend": {},
+				"tableOptions": {
+					"verticalTimeAxis": true,
+					"sortBy": {
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					},
+					"wrapping": "truncate",
+					"fixFirstColumn": true
+				},
+				"fieldOptions": [
+					{
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					}
+				],
+				"timeFormat": "MM/DD/YYYY HH:mm:ss",
+				"decimalPlaces": {
+					"isEnforced": true,
+					"digits": 1
+				},
+				"note": "",
+				"noteVisibility": "default",
+				"links": {
+					"self": "/chronograf/v1/dashboards/1/cells/d23340e5-50e4-4e06-bb8f-822b103c3933"
+				}
+			},
+			{
+				"i": "795480c0-a9aa-4830-be47-bb06371cc527",
+				"x": 4,
+				"y": 0,
+				"w": 4,
+				"h": 4,
+				"name": "Light",
+				"queries": [
+					{
+						"query": "from(bucket: \"ttn/autogen\")\n  |> range(start: dashboardTime)\n  |> filter(fn: (r) => r._measurement == \"mqtt_consumer_ttn\" and (r._field == \"payload_fields_lux\"))",
+						"queryConfig": {
+							"database": "",
+							"measurement": "",
+							"retentionPolicy": "",
+							"fields": [],
+							"tags": {},
+							"groupBy": {
+								"time": "",
+								"tags": []
+							},
+							"areTagsAccepted": false,
+							"rawText": "from(bucket: \"ttn/autogen\")\n  |> range(start: dashboardTime)\n  |> filter(fn: (r) => r._measurement == \"mqtt_consumer_ttn\" and (r._field == \"payload_fields_lux\"))",
+							"range": null,
+							"shifts": null
+						},
+						"source": "/chronograf/v1/sources/10000",
+						"type": "flux"
+					}
+				],
+				"axes": {
+					"x": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y2": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					}
+				},
+				"type": "line-plus-single-stat",
+				"colors": [
+					{
+						"id": "3ab7f262-7816-4b22-a382-d48f2d60afa8",
+						"type": "scale",
+						"hex": "#31C0F6",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "1d96aebb-46f2-419d-a05b-cb8a7a799402",
+						"type": "scale",
+						"hex": "#A500A5",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "a04cce49-cbfa-4824-83f0-250cd9223cdf",
+						"type": "scale",
+						"hex": "#FF7E27",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					}
+				],
+				"legend": {},
+				"tableOptions": {
+					"verticalTimeAxis": true,
+					"sortBy": {
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					},
+					"wrapping": "truncate",
+					"fixFirstColumn": true
+				},
+				"fieldOptions": [
+					{
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					}
+				],
+				"timeFormat": "MM/DD/YYYY HH:mm:ss",
+				"decimalPlaces": {
+					"isEnforced": true,
+					"digits": 1
+				},
+				"note": "",
+				"noteVisibility": "default",
+				"links": {
+					"self": "/chronograf/v1/dashboards/1/cells/795480c0-a9aa-4830-be47-bb06371cc527"
+				}
+			},
+			{
+				"i": "d80f6721-a0a0-4496-864b-8bc2a46f47e7",
+				"x": 8,
+				"y": 0,
+				"w": 4,
+				"h": 4,
+				"name": "Relative Humidity",
+				"queries": [
+					{
+						"query": "from(bucket: \"ttn/autogen\")\n  |> range(start: dashboardTime)\n  |> filter(fn: (r) => r._measurement == \"mqtt_consumer_ttn\" and (r._field == \"payload_fields_rh\"))",
+						"queryConfig": {
+							"database": "",
+							"measurement": "",
+							"retentionPolicy": "",
+							"fields": [],
+							"tags": {},
+							"groupBy": {
+								"time": "",
+								"tags": []
+							},
+							"areTagsAccepted": false,
+							"rawText": "from(bucket: \"ttn/autogen\")\n  |> range(start: dashboardTime)\n  |> filter(fn: (r) => r._measurement == \"mqtt_consumer_ttn\" and (r._field == \"payload_fields_rh\"))",
+							"range": null,
+							"shifts": null
+						},
+						"source": "/chronograf/v1/sources/10000",
+						"type": "flux"
+					}
+				],
+				"axes": {
+					"x": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y2": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					}
+				},
+				"type": "line-plus-single-stat",
+				"colors": [
+					{
+						"id": "3ab7f262-7816-4b22-a382-d48f2d60afa8",
+						"type": "scale",
+						"hex": "#31C0F6",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "1d96aebb-46f2-419d-a05b-cb8a7a799402",
+						"type": "scale",
+						"hex": "#A500A5",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "a04cce49-cbfa-4824-83f0-250cd9223cdf",
+						"type": "scale",
+						"hex": "#FF7E27",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					}
+				],
+				"legend": {},
+				"tableOptions": {
+					"verticalTimeAxis": true,
+					"sortBy": {
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					},
+					"wrapping": "truncate",
+					"fixFirstColumn": true
+				},
+				"fieldOptions": [
+					{
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					}
+				],
+				"timeFormat": "MM/DD/YYYY HH:mm:ss",
+				"decimalPlaces": {
+					"isEnforced": true,
+					"digits": 1
+				},
+				"note": "",
+				"noteVisibility": "default",
+				"links": {
+					"self": "/chronograf/v1/dashboards/1/cells/d80f6721-a0a0-4496-864b-8bc2a46f47e7"
+				}
+			},
+			{
+				"i": "e138036f-5509-435f-84c6-b61e51f662c8",
+				"x": 0,
+				"y": 4,
+				"w": 4,
+				"h": 4,
+				"name": "Air Quality",
+				"queries": [
+					{
+						"query": "from(bucket: \"ttn/autogen\")\n  |> range(start: dashboardTime)\n  |> filter(fn: (r) => r._measurement == \"mqtt_consumer_ttn\" and (r._field == \"payload_fields_iaq\"))",
+						"queryConfig": {
+							"database": "",
+							"measurement": "",
+							"retentionPolicy": "",
+							"fields": [],
+							"tags": {},
+							"groupBy": {
+								"time": "",
+								"tags": []
+							},
+							"areTagsAccepted": false,
+							"rawText": "from(bucket: \"ttn/autogen\")\n  |> range(start: dashboardTime)\n  |> filter(fn: (r) => r._measurement == \"mqtt_consumer_ttn\" and (r._field == \"payload_fields_iaq\"))",
+							"range": null,
+							"shifts": null
+						},
+						"source": "/chronograf/v1/sources/10000",
+						"type": "flux"
+					}
+				],
+				"axes": {
+					"x": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y2": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					}
+				},
+				"type": "line-plus-single-stat",
+				"colors": [
+					{
+						"id": "3ab7f262-7816-4b22-a382-d48f2d60afa8",
+						"type": "scale",
+						"hex": "#31C0F6",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "1d96aebb-46f2-419d-a05b-cb8a7a799402",
+						"type": "scale",
+						"hex": "#A500A5",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "a04cce49-cbfa-4824-83f0-250cd9223cdf",
+						"type": "scale",
+						"hex": "#FF7E27",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					}
+				],
+				"legend": {},
+				"tableOptions": {
+					"verticalTimeAxis": true,
+					"sortBy": {
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					},
+					"wrapping": "truncate",
+					"fixFirstColumn": true
+				},
+				"fieldOptions": [
+					{
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					}
+				],
+				"timeFormat": "MM/DD/YYYY HH:mm:ss",
+				"decimalPlaces": {
+					"isEnforced": true,
+					"digits": 1
+				},
+				"note": "",
+				"noteVisibility": "default",
+				"links": {
+					"self": "/chronograf/v1/dashboards/1/cells/e138036f-5509-435f-84c6-b61e51f662c8"
+				}
+			},
+			{
+				"i": "56fa9532-3221-4ac5-8eab-217ca305ad7a",
+				"x": 4,
+				"y": 4,
+				"w": 4,
+				"h": 4,
+				"name": "Pressure",
+				"queries": [
+					{
+						"query": "from(bucket: \"ttn/autogen\")\n  |> range(start: dashboardTime)\n  |> filter(fn: (r) => r._measurement == \"mqtt_consumer_ttn\" and (r._field == \"payload_fields_p\"))",
+						"queryConfig": {
+							"database": "",
+							"measurement": "",
+							"retentionPolicy": "",
+							"fields": [],
+							"tags": {},
+							"groupBy": {
+								"time": "",
+								"tags": []
+							},
+							"areTagsAccepted": false,
+							"rawText": "from(bucket: \"ttn/autogen\")\n  |> range(start: dashboardTime)\n  |> filter(fn: (r) => r._measurement == \"mqtt_consumer_ttn\" and (r._field == \"payload_fields_p\"))",
+							"range": null,
+							"shifts": null
+						},
+						"source": "/chronograf/v1/sources/10000",
+						"type": "flux"
+					}
+				],
+				"axes": {
+					"x": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y2": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					}
+				},
+				"type": "line-plus-single-stat",
+				"colors": [
+					{
+						"id": "base",
+						"type": "scale",
+						"hex": "#31C0F6",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "1d96aebb-46f2-419d-a05b-cb8a7a799402",
+						"type": "scale",
+						"hex": "#A500A5",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "a04cce49-cbfa-4824-83f0-250cd9223cdf",
+						"type": "scale",
+						"hex": "#FF7E27",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					}
+				],
+				"legend": {},
+				"tableOptions": {
+					"verticalTimeAxis": true,
+					"sortBy": {
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					},
+					"wrapping": "truncate",
+					"fixFirstColumn": true
+				},
+				"fieldOptions": [
+					{
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					}
+				],
+				"timeFormat": "MM/DD/YYYY HH:mm:ss",
+				"decimalPlaces": {
+					"isEnforced": true,
+					"digits": 1
+				},
+				"note": "",
+				"noteVisibility": "default",
+				"links": {
+					"self": "/chronograf/v1/dashboards/1/cells/56fa9532-3221-4ac5-8eab-217ca305ad7a"
+				}
+			},
+			{
+				"i": "879f2291-0d0c-412b-b345-119400561dc1",
+				"x": 8,
+				"y": 4,
+				"w": 4,
+				"h": 4,
+				"name": "Battery",
+				"queries": [
+					{
+						"query": "from(bucket: \"ttn/autogen\")\n  |> range(start: dashboardTime)\n  |> filter(fn: (r) => r._measurement == \"mqtt_consumer_ttn\" and (r._field == \"payload_fields_vBat\"))",
+						"queryConfig": {
+							"database": "",
+							"measurement": "",
+							"retentionPolicy": "",
+							"fields": [],
+							"tags": {},
+							"groupBy": {
+								"time": "",
+								"tags": []
+							},
+							"areTagsAccepted": false,
+							"rawText": "from(bucket: \"ttn/autogen\")\n  |> range(start: dashboardTime)\n  |> filter(fn: (r) => r._measurement == \"mqtt_consumer_ttn\" and (r._field == \"payload_fields_vBat\"))",
+							"range": null,
+							"shifts": null
+						},
+						"source": "/chronograf/v1/sources/10000",
+						"type": "flux"
+					}
+				],
+				"axes": {
+					"x": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": " V",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y2": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					}
+				},
+				"type": "gauge",
+				"colors": [
+					{
+						"id": "0",
+						"type": "min",
+						"hex": "#DC4E58",
+						"name": "fire",
+						"value": "2"
+					},
+					{
+						"id": "1",
+						"type": "max",
+						"hex": "#32B08C",
+						"name": "viridian",
+						"value": "4.3"
+					}
+				],
+				"legend": {},
+				"tableOptions": {
+					"verticalTimeAxis": true,
+					"sortBy": {
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					},
+					"wrapping": "truncate",
+					"fixFirstColumn": true
+				},
+				"fieldOptions": [
+					{
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					}
+				],
+				"timeFormat": "MM/DD/YYYY HH:mm:ss",
+				"decimalPlaces": {
+					"isEnforced": true,
+					"digits": 1
+				},
+				"note": "",
+				"noteVisibility": "default",
+				"links": {
+					"self": "/chronograf/v1/dashboards/1/cells/879f2291-0d0c-412b-b345-119400561dc1"
+				}
+			}
+		],
+		"templates": [],
+		"name": "TTN Demo",
+		"organization": "default",
+		"links": {
+			"self": "/chronograf/v1/dashboards/1",
+			"cells": "/chronograf/v1/dashboards/1/cells",
+			"templates": "/chronograf/v1/dashboards/1/templates"
+		}
+	}
+}
